@@ -5,6 +5,9 @@ const categories = [
   { id: 'apparel', name: 'Apparel', children: ['shirts', 'shoes'] }
 ];
 
+let cachedTree: { categories: typeof categories; generatedAt: string } | null = null;
+
 export function categoryTree(_req: Request, res: Response) {
-  res.json({ categories, generatedAt: new Date().toISOString() });
+  cachedTree ??= { categories, generatedAt: new Date().toISOString() };
+  res.json(cachedTree);
 }
