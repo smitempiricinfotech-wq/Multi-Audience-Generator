@@ -6,7 +6,6 @@ import { quoteCheckout } from './routes/checkout.js';
 import { categoryTree } from './routes/categories.js';
 import { getSavedCart, saveCart } from './routes/savedCarts.js';
 import { applyReferralReward } from './routes/referrals.js';
-import { liveChatWidget } from './routes/liveChat.js';
 
 export const app = express();
 app.use(express.json());
@@ -19,4 +18,3 @@ app.get('/categories/tree', categoryTree);
 app.post('/saved-carts', saveCart);
 app.get('/saved-carts/:savedCartId', getSavedCart);
 app.post('/referral-rewards', applyReferralReward);
-app.get('/live-chat/widget', liveChatWidget);
