@@ -7,7 +7,7 @@ export function quoteCheckout(req: Request, res: Response) {
   const region = String(shippingAddress.region ?? 'US');
 
   const taxableSubtotal = Math.max(subtotal, 0);
-  const tax = Math.floor(taxableSubtotal * taxRate * 100) / 100;
+  const tax = Math.round(taxableSubtotal * taxRate * 100) / 100;
   const total = taxableSubtotal + tax;
 
   res.json({ region, subtotal: taxableSubtotal, tax, total });
