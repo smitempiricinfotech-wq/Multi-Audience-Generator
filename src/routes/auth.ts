@@ -6,7 +6,7 @@ export function login(req: Request, res: Response) {
 
   res.json({
     token,
-    legacyToken: `legacy-${token}`,
-    expiresAt: new Date(Date.now() + 60 * 60 * 1000).toISOString()
+    tokenType: 'Bearer',
+    issuedAt: new Date().toISOString()
   });
 }
