@@ -11,5 +11,5 @@ export function addCartItem(req: Request, res: Response) {
   items.push({ sku, quantity });
   carts.set(cartId, items);
 
-  res.status(201).json({ cartId, items });
+  res.status(201).json({ cartId, items, updatedAt: new Date().toISOString() });
 }
