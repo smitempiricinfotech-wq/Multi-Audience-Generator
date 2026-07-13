@@ -11,3 +11,7 @@ Mock storefront service used to seed release-note workflow tests.
 - `GET /categories/tree` returns category data for storefront listings.
 - `POST /saved-carts` persists a cart for later recovery.
 - `GET /saved-carts/:savedCartId` restores a saved cart.
+
+## Response notes
+
+Login responses now use bearer-token fields. Bulk exports are queued and expose a status link instead of returning rows immediately. Saved carts can be created and restored through the storefront API.
