@@ -1,6 +1,6 @@
 # Multi-Audience Generator
 
-Mock storefront service used to seed release-note workflow tests.
+Mock storefront API service used to seed release-note workflow tests.
 
 ## API surface
 
