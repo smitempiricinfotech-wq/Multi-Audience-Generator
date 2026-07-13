@@ -4,7 +4,7 @@ Mock storefront service used to seed release-note workflow tests.
 
 ## API surface
 
-- `POST /login` returns `token`, `legacyToken`, and `expiresAt`.
+- `POST /login` returns `token`, `tokenType`, and `issuedAt`.
 - `GET /v1/export` returns a synchronous export payload.
 - `POST /cart/items` adds an item to a cart.
 - `POST /checkout/quote` calculates taxes and totals.
